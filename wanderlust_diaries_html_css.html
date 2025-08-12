@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wanderlust Diaries</title>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f8f8f8;
+        color: #333;
+        line-height: 1.6;
+    }
+    header {
+        background: linear-gradient(to right, #ff7e5f, #feb47b);
+        padding: 2rem;
+        text-align: center;
+        color: #fff;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 3rem;
+        text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    }
+    nav {
+        margin-top: 1rem;
+    }
+    nav a {
+        margin: 0 15px;
+        color: #fff;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s;
+    }
+    nav a:hover {
+        color: #333;
+    }
+    .hero {
+        background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+        height: 60vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.4);
+    }
+    .hero-text {
+        position: relative;
+        color: white;
+        text-align: center;
+        z-index: 1;
+    }
+    .hero-text h2 {
+        font-size: 2.5rem;
+    }
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 2rem;
+    }
+    .cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+    .card {
+        background: white;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    .card img {
+        width: 100%;
+        display: block;
+    }
+    .card-content {
+        padding: 1.5rem;
+    }
+    .card-content h3 {
+        margin-top: 0;
+    }
+    footer {
+        background: #333;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+    .newsletter {
+        background: #feb47b;
+        padding: 2rem;
+        text-align: center;
+        color: #fff;
+        margin: 3rem 0;
+        border-radius: 10px;
+    }
+    .newsletter input {
+        padding: 0.8rem;
+        width: 300px;
+        border: none;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+    .newsletter button {
+        padding: 0.8rem 1.2rem;
+        background: #ff7e5f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+    .newsletter button:hover {
+        background: #e86a50;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Wanderlust Diaries</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Destinations</a>
+        <a href="#">Tips</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact</a>
+    </nav>
+</header>
+<section class="hero">
+    <div class="hero-text">
+        <h2>Explore the World with Us</h2>
+        <p>Your journey starts here</p>
+    </div>
+</section>
+<div class="container">
+    <h2>Latest Adventures</h2>
+    <div class="cards">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1502602898657-3e91760cbb34" alt="Paris">
+            <div class="card-content">
+                <h3>Romantic Paris</h3>
+                <p>Experience the city of love, from the Eiffel Tower to hidden cafés.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Bali">
+            <div class="card-content">
+                <h3>Tropical Bali</h3>
+                <p>Relax on the beaches and immerse yourself in the local culture.</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1534447677768-be436bb09401" alt="New York">
+            <div class="card-content">
+                <h3>Vibrant New York</h3>
+                <p>Discover the city that never sleeps, from Times Square to Central Park.</p>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="newsletter">
+    <h2>Join Our Newsletter</h2>
+    <p>Get the latest travel tips, guides, and adventures straight to your inbox!</p>
+    <input type="email" placeholder="Enter your email">
+    <button>Subscribe</button>
+</section>
+<footer>
+    <p>&copy; 2025 Wanderlust Diaries | Designed with ❤️ for travel lovers</p>
+</footer>
+</body>
+</html>
